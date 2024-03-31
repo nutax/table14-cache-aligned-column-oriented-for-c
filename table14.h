@@ -8,7 +8,7 @@ struct table14_t
 {
     uint32_t meta[14];
     void *data;
-};
+}; // 14 * (4 bytes) +  1 * (8 bytes (or less)) -> 64 bytes at most
 
 #define TABLE14_CACHE_LINE 64
 

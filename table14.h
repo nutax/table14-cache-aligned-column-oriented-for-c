@@ -6,8 +6,8 @@
 
 struct table14_t
 {
-    uint32_t meta[14];
-    void *data;
+    uint32_t meta[14]; // [0] = size, [1-13] = column relative address to first column
+    void *data; // absolute address of first column
 }; // 14 * (4 bytes) +  1 * (8 bytes (or less)) -> 64 bytes at most
 
 #define TABLE14_CACHE_LINE 64
